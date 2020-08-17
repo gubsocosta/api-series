@@ -4,20 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Serie;
 
-class SeriesController extends Controller
+/**
+ * Class EpisodesController
+ *
+ * @package App\Http\Controllers
+ */
+class SeriesController extends BaseController
 {
     /**
-     * Create a new controller instance.
+     * Create new instace of controller
      *
      * @return void
      */
     public function __construct()
     {
-        //
-    }
-
-    public function index()
-    {
-        return Serie::all();
+        $this->className = Serie::class;
     }
 }
