@@ -1,4 +1,4 @@
-# API Restful com Lumen
+# API Series - Sistema de controle de séries
 
 Sistema desenvolvido no curso de [formação em PHP](https://www.alura.com.br/formacao-desenvolvedor-php), oferecido pela [Alura](https://www.alura.com.br) Cursos Online.
 
