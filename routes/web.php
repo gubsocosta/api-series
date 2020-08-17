@@ -18,7 +18,7 @@ $router->group(['prefix' =>  'api'], function() use($router) {
     //Auth
     $router->post('login', 'TokenController@generateToken');
 
-    $router->group(['middleware' => 'auth'], function() use($router) {
+    $router->group(['middleware' => 'custom_auth'], function() use($router) {
         // Series
         $router->group(['prefix' =>  'series'], function() use($router) {
             $router->get    (''     , 'SeriesController@index');

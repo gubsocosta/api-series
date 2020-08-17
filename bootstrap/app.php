@@ -23,6 +23,7 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
+
 $app->withFacades();
 
 $app->withEloquent();
@@ -80,6 +81,9 @@ $app->routeMiddleware([
     'auth' => App\Http\Middleware\Authenticate::class,
 ]);
 
+$app->routeMiddleware([
+    'custom_auth' => App\Http\Middleware\AuthMiddleware::class
+]);
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers

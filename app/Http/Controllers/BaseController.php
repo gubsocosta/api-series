@@ -12,6 +12,9 @@ use Illuminate\Http\Request;
  */
 abstract class BaseController extends Controller
 {
+    /**
+     * @var string
+     */
     protected string $className;
 
     /**
@@ -23,7 +26,7 @@ abstract class BaseController extends Controller
     public function index(Request $request)
     {
         return response()->json(
-            $this->className::paginate($request->per_page),
+            $this->className::paginate($request->per_page ?? null),
             200
         );
     }
@@ -57,7 +60,7 @@ abstract class BaseController extends Controller
     }
 
     /**
-     * Update the specific resource
+     * Update the given resource
      *
      * @param Request $request
      * @param int $id
